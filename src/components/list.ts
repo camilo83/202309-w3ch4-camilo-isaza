@@ -1,7 +1,7 @@
 import { Component } from './components';
 /* A import { Serie } from '../model/serie_type'; */
 import './styles.scss';
-/* Import { Card } from './card'; */
+import { Card } from './card';
 import { repo } from '../data/series';
 
 export class List extends Component {
@@ -17,7 +17,7 @@ export class List extends Component {
 
     const watchedSeries = repo.filter((item) => item.watched === false);
     console.log(watchedSeries);
-    // Repo.map((item) => new Card('ul.series-list', item));
+    watchedSeries.map((item) => new Card('ul.series-list', item));
   }
 
   createTemplate() {

@@ -14,7 +14,9 @@ export class ListWatched extends Component {
   render() {
     this.template = this.createTemplate();
     super.render();
-    repo.map((item) => new Card('ul.series-list--watched', item));
+    const unwatchedSeries = repo.filter((item) => item.watched === true);
+    console.log(unwatchedSeries);
+    unwatchedSeries.map((item) => new Card('ul.series-list--watched', item));
   }
 
   createTemplate() {
