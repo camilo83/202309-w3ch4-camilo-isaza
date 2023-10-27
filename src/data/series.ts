@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-const series = [
+export const repo = [
   {
     id: 1,
     name: 'The Sopranos',
