@@ -14,7 +14,10 @@ export class List extends Component {
   render() {
     this.template = this.createTemplate();
     super.render();
-    repo.map((item) => new Card('ul.series-list', item));
+
+    const watchedSeries = repo.filter((item) => item.watched === false);
+    console.log(watchedSeries);
+    watchedSeries.map((item) => new Card('ul.series-list', item));
   }
 
   createTemplate() {
